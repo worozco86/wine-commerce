@@ -1,0 +1,21 @@
+.conteiner-flex{
+align-items: space-between;
+background-color: cornflowerblue;
+}
+
+.cart-w{
+margin-right: 3rem;
+}
+
+.material-symbols-outlined{
+  font-size: 3rem;
+}
+.cart-num{
+  font-size: 3rem;
+}
+
+.saludo{
+  text-align: center;
+  font-size: 3rem;
+
+}
