@@ -4,16 +4,18 @@ import { Center, Box, Image } from "@chakra-ui/react";
 
 const Welcome = () => {
   return (
-    <div>
+  <Box className="boxWelcome">
    <Center>
-     <Box boxSize="xxl">
-      <Image
+     
+      <Image 
+        boxSize="750px"
         src="./src/assets/bodega.jpg"
         alt="bodega"
       />
+      </Center>
       </Box>
-   </Center>
-   </div>
+   
+ 
   )
 }
 

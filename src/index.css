@@ -2,7 +2,9 @@
 align-items: space-between;
 background-color: cornflowerblue;
 }
-
+.boxWelcome{
+  background-color: lightslategray;
+}
 .cart-w{
 margin-right: 3rem;
 }
