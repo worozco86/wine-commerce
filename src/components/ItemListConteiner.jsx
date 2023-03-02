@@ -15,8 +15,7 @@ const ItemListConteiner = () => {
 
     fetchData();
   }, []);
-  console.log(data
-    )
+  
   return (
     <ItemList items={data} />
   )
