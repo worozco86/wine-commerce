@@ -4,7 +4,7 @@ import { Image } from '@chakra-ui/react'
 import { Flex, Spacer } from '@chakra-ui/react'
 import { Box } from '@chakra-ui/react'
 import { Heading } from '@chakra-ui/react'
-import { Button, ButtonGroup } from '@chakra-ui/react'
+import { Button } from '@chakra-ui/react'
 import {
   Menu,
   MenuButton,

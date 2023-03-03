@@ -1,8 +1,7 @@
 import React from 'react'
-import { Card, CardHeader, CardBody, CardFooter, Image, Stack, Heading, Text, Button, ButtonGroup } from '@chakra-ui/react'
+import { Card, Divider, CardBody, CardFooter, Image, Stack, Heading, Text, Button, ButtonGroup } from '@chakra-ui/react'
 
-
-const Item = ({id, name, category, price, stock }) => {
+const Item = ({id, name, category, price, stock, img, description }) => {
   return (
     <div key={id}>
      <Card maxW='sm'>

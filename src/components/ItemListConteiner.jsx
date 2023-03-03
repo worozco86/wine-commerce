@@ -17,7 +17,9 @@ const ItemListConteiner = () => {
   }, []);
   
   return (
+    <div style={{ display: "flex", flexWrap: "wrap", gap: "1rem" }}>
     <ItemList items={data} />
+    </div>
   )
 }
 
