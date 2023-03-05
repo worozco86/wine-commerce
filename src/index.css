@@ -15,7 +15,14 @@ margin-right: 3rem;
 .cart-num{
   font-size: 3rem;
 }
-
+.itemDiv{
+  width: 100%;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  gap: 3px;
+  align-items: space-between;
+  
+}
 .saludo{
   text-align: center;
   font-size: 3rem;

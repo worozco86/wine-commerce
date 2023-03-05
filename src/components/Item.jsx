@@ -13,7 +13,6 @@ const Item = ({id, name, category, price, stock, img, description }) => {
     />
         <Stack mt='6' spacing='3'>
         <Heading size='md'>{name}</Heading>
-        <Text>Descripcion: {description}</Text>
         <Text>Categoria: {category}</Text>
         <Text color='red.600'>Stock: {stock}</Text>
         <Text color='blue.600' fontSize='2xl'>
@@ -25,11 +24,11 @@ const Item = ({id, name, category, price, stock, img, description }) => {
        <CardFooter>
        <ButtonGroup spacing='2'>
        <Button variant='solid' colorScheme='blue'>
-        Detalles
+       <Link to={`/item/${id}`}>Detalles</Link>
       </Button>
     </ButtonGroup>
   </CardFooter>
-</Card>
+</Card> 
 </div>
   )
 }

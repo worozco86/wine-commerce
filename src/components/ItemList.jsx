@@ -4,7 +4,7 @@ import Item from './Item'
 const ItemList = ({ items }) => {
   console.log(items)
   return (
-    <div>
+    <div className="itemDiv">
       {items?.map(item => (
          <Item 
           key={item.id}

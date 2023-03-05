@@ -15,12 +15,15 @@ const ItemListConteiner = () => {
 
     fetchData();
   }, []);
+
+  const catFilter = data.filter((item)=>item.category === category);
   
   return (
-    <div style={{ display: "flex", flexWrap: "wrap", gap: "1rem" }}>
-    <ItemList items={data} />
-    </div>
-  )
-}
+ <div>
+    {category ? <ItemList item={catFilter}/> : <ItemList item={data}/>}
+ </div>
+  );
+
+};
 
 export default ItemListConteiner
