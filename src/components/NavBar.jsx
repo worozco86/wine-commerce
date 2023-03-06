@@ -27,7 +27,7 @@ const NavBar = () => {
     <Menu>
       <Link to="/catalogo">
     <Button>
-    Catalogo
+    <Link to={"/catalogo"}>Catalogo</Link>
     </Button>
     </Link>
     </Menu>
@@ -36,9 +36,15 @@ const NavBar = () => {
     Categorias
     </MenuButton>
     <MenuList>
-    <MenuItem>TINTOS</MenuItem>
-    <MenuItem>BLANCOS</MenuItem>
-    <MenuItem>VARIETALES</MenuItem>
+    <Link to={`/Categorias/${"TINTOS"}`}>
+      <MenuItem>TINTOS</MenuItem>
+    </Link>
+    <Link to={`/Categorias/${"BLANCOS"}`}>
+      <MenuItem>BLANCOS</MenuItem>
+    </Link>
+    <Link to={`/Categorias/${"VARIETALES"}`}>
+      <MenuItem>VARIETALES</MenuItem>
+    </Link>
     </MenuList>
     </Menu>
     <Spacer />

@@ -24,7 +24,7 @@ const Item = ({id, name, category, price, stock, img, description }) => {
        <CardFooter>
        <ButtonGroup spacing='2'>
        <Button variant='solid' colorScheme='blue'>
-       <Link to={`/item/${id}`}>Detalles</Link>
+       Detalles
       </Button>
     </ButtonGroup>
   </CardFooter>

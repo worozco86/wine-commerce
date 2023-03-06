@@ -20,7 +20,8 @@ margin-right: 3rem;
   display: grid;
   grid-template-columns: auto auto auto;
   gap: 3px;
-  align-items: space-between;
+  justify-content: space-around;
+  
   
 }
 .saludo{
