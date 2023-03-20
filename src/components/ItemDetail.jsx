@@ -7,38 +7,47 @@ import {
     Heading,
     Text,
     Divider,
+    CardFooter
   } from "@chakra-ui/react";
-  import { useParams } from "react-router-dom";
+
+  import ItemCount from "./ItemCount";
+  import { useEffect, useState } from "react";
+  
   
   const ItemDetail = ({ item }) => {
-    console.log(item)
-    const { id } = useParams();
-    const itemId = parseInt(id);
-    if (!item) return null;
     
   
     return (
       <>
           <Center>
-          <Card maxW='sm' key={item.id} className="card-main">
+          <Card align='center' maxW='sm' key={item.id} className="card-main">
             <CardBody>
                 <Image borderRadius="lg" src={item.img} />
                 <Stack mt="6" spacing="3">
-                  <Heading size="md">{item.name}</Heading>
+                  <Heading size="md">{item.nombre}</Heading>
                   <Text color="blue.800" fontSize="l">
-                    Descripcion: {item.description}
+                    Descripcion: {item.descripcion}
                   </Text>
                   <Text color="blue.800" fontSize="l">
-                    Categoria: {item.category}
+                    Categoria: {item.categoria}
                   </Text>
                   <Text color="red.600" fontSize="xl">
                     Stock: {item.stock}
                   </Text>
                   <Text color="green.600" fontSize="xl">
-                    Precio: {item.price}
+                    Precio: {item.precio}
                   </Text>
                 </Stack>
               </CardBody>
+              <Divider />
+              <CardFooter className="card-footer">
+                <ItemCount
+                  stock={item.stock}
+                  id={item.id}
+                  price={item.precio}
+                  name={item.nombre}
+                />
+              </CardFooter>
           </Card>
           </Center>
       </>

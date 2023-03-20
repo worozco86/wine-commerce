@@ -2,6 +2,7 @@ import React from 'react';
 import { useState, useEffect } from 'react';
 import ItemList from './ItemList';
 import { useParams } from 'react-router-dom';
+import { collection, getDocs, getFirestore } from "firebase/firestore";
 
 
 const ItemListConteiner = () => {
@@ -9,13 +10,15 @@ const ItemListConteiner = () => {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    async function fetchData() {
-      const response = await fetch('../data.json');
-      const jsonData = await response.json();
-      setData(jsonData);
-    }
-
-    fetchData();
+    const db = getFirestore();
+    const winesCollection = collection(db, "wines");
+    getDocs(winesCollection).then((querySnapshot) => {
+      const wines = querySnapshot.docs.map((doc) => ({
+        ...doc.data(),
+        id: doc.id,
+      }));
+      setData(wines);
+    });
   }, []);
 
   const catFilter = data.filter((item) => item.category === category);

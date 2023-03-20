@@ -48,7 +48,11 @@ const NavBar = () => {
     </MenuList>
     </Menu>
     <Spacer />
-    <CartWidget/>
+    <Box>
+        <Link to={"/cart"}>
+          <CartWidget />
+          </Link>
+    </Box>
     </Flex>
     </Box>
   )
