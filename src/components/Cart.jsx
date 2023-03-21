@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import { CartContext } from "../context/ShoppingCartContext";
-import { Table, Thead, Tbody, Tr, Th, Td, Center, Text, Heading, Button, Box } from '@chakra-ui/react'
+import { Table, Thead, Tbody, Tr, Th, Td, Center, Text, Heading, Button, Box, Image } from '@chakra-ui/react'
 
 
 const Cart = () => {

@@ -2,10 +2,10 @@ import React from 'react'
 import Item from './Item'
 
 const ItemList = ({ items }) => {
-  console.log(items)
+  
   return (
     <div className="itemDiv">
-      {items?.map(item => (
+      {items?.map((item) => (
          <Item 
           key={item.id}
           img={item.img}

@@ -33,16 +33,16 @@ const NavBar = () => {
     </Menu>
     <Menu>
     <MenuButton as={Button} rightIcon={<ChevronDownIcon />}>
-    Categorias
+      Categorias
     </MenuButton>
     <MenuList>
-    <Link to={`/Categorias/${"TINTOS"}`}>
+    <Link to={"/Categorias/TINTOS"}>
       <MenuItem>TINTOS</MenuItem>
     </Link>
-    <Link to={`/Categorias/${"BLANCOS"}`}>
+    <Link to={"/Categorias/BLANCOS"}>
       <MenuItem>BLANCOS</MenuItem>
     </Link>
-    <Link to={`/Categorias/${"VARIETALES"}`}>
+    <Link to={"/Categorias/VARIETALES"}>
       <MenuItem>VARIETALES</MenuItem>
     </Link>
     </MenuList>
