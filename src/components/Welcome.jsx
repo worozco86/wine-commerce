@@ -1,21 +1,19 @@
 import React from 'react'
-import { Center, Box, Image } from "@chakra-ui/react";
+import { Center, Box, Image, AbsoluteCenter } from "@chakra-ui/react";
 
 
 const Welcome = () => {
   return (
-  <Box className="boxWelcome">
-   <Center>
-     
+  <Box w='100%' h='700px'bgImage="https://media.admagazine.com/photos/618a62b169ed46faf86e30ef/master/w_1600%2Cc_limit/81858.jpg" bgPosition="center" bgRepeat="no-repeat">
+   <AbsoluteCenter>
       <Image 
-        boxSize="750px"
         src="./src/assets/bodega.jpg"
         alt="bodega"
-      />
-      </Center>
-      </Box>
+        />
+  </AbsoluteCenter>
+  </Box>
    
- 
+
   )
 }
 

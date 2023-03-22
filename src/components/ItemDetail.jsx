@@ -11,7 +11,6 @@ import {
   } from "@chakra-ui/react";
 
   import ItemCount from "./ItemCount";
-  import { useEffect, useState } from "react";
   
   
   const ItemDetail = ({ item }) => {
