@@ -1,10 +1,20 @@
 import React, { useContext } from 'react';
 import { CartContext } from "../context/ShoppingCartContext";
 import { Table, Thead, Tbody, Tr, Th, Td, Center, Text, Heading, Button, Box } from '@chakra-ui/react'
+import Swal from "sweetalert2"
 
 
 const Cart = () => {
   const [cart, setCart, addItemToCart] = useContext(CartContext);
+
+  const mostrarMensaje = () => {
+    Swal.fire({
+    position: 'top-center',
+    icon: 'success',
+    title: 'Muchas gracias por su compra!!!',
+    showConfirmButton: false,
+    timer: 1500})
+  }
 
   const getTotalPrice = () => {
     let totalPrice = 0;
@@ -67,7 +77,7 @@ const Cart = () => {
     </Center>
     </Box>
     <Center>
-    <Button colorScheme='purple'size='lg' variant='solid'm={2}>COMPRAR</Button>
+    <Button colorScheme='purple'size='lg' variant='solid'm={2} onClick={mostrarMensaje}>COMPRAR</Button>
     </Center>
     </>
   );
