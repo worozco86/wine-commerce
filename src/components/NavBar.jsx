@@ -18,7 +18,7 @@ const NavBar = () => {
   return (
     <Box className='boxCentral'>
     <Flex minWidth='max-content' alignItems='center' gap='2'>
-    <Image borderRadius='full' boxSize='100px' src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTjokwD3jLXgINL-QhCit_To0GMrrdp4TGvmw&usqp=CAU' alt='Cup'/>
+    <Image borderRadius='full' boxSize='100px' m={1} src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTjokwD3jLXgINL-QhCit_To0GMrrdp4TGvmw&usqp=CAU' alt='Cup'/>
     <Box p='2'>               
     <Heading color="white" size='xl'> <Link to={"/"}>
     Wine-Store</Link></Heading>

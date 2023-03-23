@@ -7,6 +7,12 @@ background-color: cornflowerblue;
 }
 .cart-w{
 margin-right: 3rem;
+display: flex;
+justify-content: center;
+align-items: center;
+border: solid 3px;
+padding: 3px;
+
 }
 
 .material-symbols-outlined{

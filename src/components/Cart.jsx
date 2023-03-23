@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import { CartContext } from "../context/ShoppingCartContext";
-import { Table, Thead, Tbody, Tr, Th, Td, Center, Text, Heading, Button, Box, Image } from '@chakra-ui/react'
+import { Table, Thead, Tbody, Tr, Th, Td, Center, Text, Heading, Button, Box } from '@chakra-ui/react'
 
 
 const Cart = () => {
@@ -26,7 +26,7 @@ const Cart = () => {
     <>
     <Box bg="blue">
     <Center>
-    <Heading bg="blue" color="white" size='xl' center>
+    <Heading bg="blue" color="white" size='xl'>
     SU CARRITO
     </Heading>
     </Center>
@@ -61,14 +61,17 @@ const Cart = () => {
         )})}
       </Tbody>
     </Table>
+    <Box bg="blue" p={3}>
     <Center>
-    <Heading>Total=${getTotalPrice()}</Heading>
+    <Heading bg="blue" color="white" size='xl'>TOTAL= ${getTotalPrice()}</Heading>
     </Center>
+    </Box>
     <Center>
-    <Button>Comprar</Button>
+    <Button colorScheme='purple'size='lg' variant='solid'm={2}>COMPRAR</Button>
     </Center>
     </>
   );
 };
 
 export default Cart;
+
