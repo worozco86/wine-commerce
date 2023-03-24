@@ -24,6 +24,9 @@ const Cart = () => {
     return totalPrice;
   };
 
+  const limpiarCarrito = () => {
+    setCart([]);
+  }
   
 
   if (cart.length === 0) {
@@ -77,8 +80,9 @@ const Cart = () => {
     </Center>
     </Box>
     <Center>
-    <Button colorScheme='purple'size='lg' variant='solid'm={2} onClick={mostrarMensaje}>COMPRAR</Button>
+    <Button colorScheme='purple' size='lg' variant='solid' m={2} onClick={() => {mostrarMensaje(); limpiarCarrito();}}>COMPRAR</Button>
     </Center>
+    
     </>
   );
 };
