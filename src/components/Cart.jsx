@@ -27,7 +27,17 @@ const Cart = () => {
   const limpiarCarrito = () => {
     setCart([]);
   }
-  
+
+  const eliminarUnidad = (itemId) => {
+    const itemIndex = cart.findIndex(item => item.id === itemId);
+    const newCart = [...cart];
+    if (newCart[itemIndex].quantity === 1) {
+      newCart.splice(itemIndex, 1);
+    } else {
+      newCart[itemIndex].quantity--;
+    }
+    setCart(newCart);
+  }
 
   if (cart.length === 0) {
     return <Center>
@@ -51,6 +61,7 @@ const Cart = () => {
           <Th>Cantidad</Th>
           <Th>Precio</Th>
           <Th>Total</Th>
+          <Th></Th>
         </Tr>
       </Thead>
       <Tbody>
@@ -70,6 +81,9 @@ const Cart = () => {
             </Td>
             <Td>${item.price}</Td>
             <Td>${item.quantity * item.price}</Td>
+            <Td>
+              <Button colorScheme='purple' size='sm' variant='outline' onClick={() => eliminarUnidad(item.id)}>ELIMINAR</Button>
+            </Td>
           </Tr>
         )})}
       </Tbody>
@@ -88,4 +102,3 @@ const Cart = () => {
 };
 
 export default Cart;
-
