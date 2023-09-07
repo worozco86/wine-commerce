@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { CartContext } from "../context/ShoppingCartContext";
+import { CartContext } from "../Context/ShoppingCartProvider";
 import { Table, Thead, Tbody, Tr, Th, Td, Center, Text, Heading, Button, Box } from '@chakra-ui/react'
 import Swal from "sweetalert2"
 

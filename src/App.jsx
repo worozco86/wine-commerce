@@ -1,13 +1,14 @@
-import React from 'react'
-import NavBar from './components/NavBar'
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import Welcome from './components/Welcome'
-import ItemListContainer from './components/ItemListContainer'
-import ItemDetailContainer from './components/ItemDetailContainer'
-import { ShoppingCartProvider } from './context/ShoppingCartContext'
-import Cart from "./components/Cart";
+import React from 'react';
+import NavBar from './components/NavBar';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Welcome from './components/Welcome';
+import ItemListContainer from './components/ItemListContainer';
+import ItemDetailContainer from './components/ItemDetailContainer';
+import ShoppingCartProvider from "./Context/ShoppingCartProvider"; // Verifica las mayúsculas y minúsculas aquí
 
-const App = () => {
+import Cart from './components/Cart';
+
+function App() {
   return (
     <div>
       <ShoppingCartProvider>
@@ -23,7 +24,7 @@ const App = () => {
         </BrowserRouter>
       </ShoppingCartProvider>
     </div>
-  )
+  );
 }
 
 export default App;
