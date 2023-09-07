@@ -82,7 +82,7 @@ const Cart = () => {
             <Td>${item.price}</Td>
             <Td>${item.quantity * item.price}</Td>
             <Td>
-              <Button colorScheme='purple' size='sm' variant='outline' onClick={() => eliminarUnidad(item.id)}>ELIMINAR</Button>
+              <Button colorScheme='purple' size='sm' variant='outline' onClick={() => eliminarUnidad(item.id)}>-</Button>
             </Td>
           </Tr>
         )})}
